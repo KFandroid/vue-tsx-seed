@@ -1,5 +1,6 @@
 import { withModifiers, defineComponent, ref } from 'vue'
-const Menu = defineComponent({
+export default defineComponent({
+  name: 'Menu',
   setup() {
     const count = ref(0)
 
@@ -16,7 +17,9 @@ const Menu = defineComponent({
       <>
         <el-menu
           default-active={activeIndex.value}
-          class="el-menu-demo"
+          active-text-color="#fff"
+          background-color="#545c64"
+          text-color="#85afb6"
           onSelect={handleSelect}>
           <el-menu-item index="1">Processing Center</el-menu-item>
           <el-sub-menu index="2">
@@ -52,5 +55,3 @@ const Menu = defineComponent({
     )
   },
 })
-
-export default Menu
